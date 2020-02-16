@@ -24,4 +24,5 @@ class ConexaoTwitter:
 
             return tweepy.API(__authentication)
         except tweepy.TweepError as erro:
-            return {"erro": f"falha ao conectar com twitter{erro}"}
+            Exception({"erro": f"falha ao conectar com twitter{erro}"})
+            return None
