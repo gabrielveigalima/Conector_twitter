@@ -26,3 +26,7 @@ class ConexaoTwitter:
         except tweepy.TweepError as erro:
             Exception({"erro": f"falha ao conectar com twitter{erro}"})
             return None
+
+    def buscar_tweets(self, palavra = 'morrer', localizacao = "-22.785275,-43.4046764,30km"):
+        twitter = self.conectar()
+        return twitter.search(q=palavra, geocode=localizacao)
