@@ -1,9 +1,9 @@
 image: docker:stable
 
 services:
-  -docker:dind
+  - docker:dind
 before_script:
-  -docker info
+  - docker info
 
 build-docker:
   stage: build
