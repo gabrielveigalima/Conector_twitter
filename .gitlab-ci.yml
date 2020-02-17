@@ -1,0 +1,6 @@
+image: python:3.7-slim
+
+build-docker:
+  stage: build
+  script:
+    - docker build -t minha .
