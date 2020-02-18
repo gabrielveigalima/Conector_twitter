@@ -24,6 +24,17 @@ def tweets(palavra):  # pylint: disable=unused-variable
 
     return Response(json.dumps(tweet.Tweet().buscar_tweets(palavra, localizacao)), mimetype="application/json")
 
+@app.route("/tweets/<string:palavra>/<string:localizacao>")
+def tweets_localizacao(palavra, localizacao):  # pylint: disable=unused-variable
+    """ apresentacao da aplicação.
+    """
+
+
+
+    #localizacao = "-22.785275,-43.4046764,30km"
+
+    return Response(json.dumps(tweet.Tweet().buscar_tweets(palavra, localizacao)), mimetype="application/json")
+
 
 @app.route('/health')
 def Health():

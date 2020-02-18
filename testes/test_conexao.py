@@ -8,7 +8,7 @@ from src.conexao import conexao_twitter
 MODULE_DIR = os.path.dirname(__file__)
 sys.path.append(os.path.join(MODULE_DIR, '../..'))
 
-def test_conexao_com_twitter():
+def test_conexao_com_twitter_nao_deve_retornar_none():
     assert conexao_twitter.ConexaoTwitter().conectar() != None
 
 def test_varivais_de_ambiente_para_conectar_ao_twitter():
