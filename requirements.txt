@@ -2,5 +2,5 @@ tweepy==3.8.0
 pytest==5.3.5
 flask==1.1.1
 flask_cors==3.0.8
-waitress==1.4.3
+waitress==2.1.1
 numpy==1.18.1
